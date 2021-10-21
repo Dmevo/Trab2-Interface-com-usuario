@@ -1,0 +1,36 @@
+@media screen and (min-width: 360px){
+    body {
+        background-color: rgb(77, 77, 77);
+    }
+
+    header {
+        display: grid;
+        grid-template-areas: 
+        "buttons"
+        "filmes";
+        background-color: rgb(114, 114, 114);
+        margin: 0;
+    }
+
+    header .nav-buttons {
+        grid-area: buttons;
+        background-color: royalblue;
+    }
+
+    header .nav-filmes {
+        background-color: seagreen;
+        grid-area: filmes;
+        display: grid;
+        grid-template-areas: "cartaz breve";
+    }
+
+    .cartaz {
+        grid-area: cartaz;
+        background-color: slateblue;
+    }
+
+    .breve {
+        grid-area: breve;
+        background-color: teal;
+    }
+}
