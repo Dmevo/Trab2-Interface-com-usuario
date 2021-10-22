@@ -12,14 +12,14 @@
         "buttons"
         "filmes";
         background-color: rgb(114, 114, 114);
-        padding-top: 15px;
+        padding-top: 10px;
     }
 
     header .nav-buttons {
         grid-area: buttons;
         display: grid;
         grid-template-areas: "logo procura conta";
-        grid-template-columns: auto 100px 100px;
+        grid-template-columns: auto 50px 50px;
         place-items: start;
     }
 
@@ -27,7 +27,7 @@
         grid-area: filmes;
         display: grid;
         grid-template-areas: "cartaz breve";
-        grid-template-rows: 100px;
+        grid-template-rows: 50px;
         place-items: center;
     }
 
@@ -55,15 +55,16 @@
 
     
     header img {
-        width: 100px;
-        height: 80px;
+        width: 50px;
+        height: 40px;
     }
     
 
     header nav p {
-        font-size: 55px;
+        font-size: 20px;
         font-family: Righteous;}
-
+    
+    
     .filme-area {
         display: flex;
         flex-wrap: wrap;
@@ -73,11 +74,13 @@
     .filme {
         width: 101px;
         height: 159px;
+        margin: 15px;
     }
 
     .cartaz {
         width: 101px;
         height: 159px;
     }
+    
 }
 
