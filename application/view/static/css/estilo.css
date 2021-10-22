@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 @media screen and (min-width: 360px){
     body {
         background-color: rgb(77, 77, 77);
+        margin: 0px;
     }
 
     header {
@@ -9,28 +12,72 @@
         "buttons"
         "filmes";
         background-color: rgb(114, 114, 114);
-        margin: 0;
+        padding-top: 15px;
     }
 
     header .nav-buttons {
         grid-area: buttons;
-        background-color: royalblue;
+        display: grid;
+        grid-template-areas: "logo procura conta";
+        grid-template-columns: auto 100px 100px;
+        place-items: start;
     }
 
     header .nav-filmes {
-        background-color: seagreen;
         grid-area: filmes;
         display: grid;
         grid-template-areas: "cartaz breve";
+        grid-template-rows: 100px;
+        place-items: center;
+    }
+
+    header .em-cartaz {
+        grid-area: cartaz;
+        color: #F3AF00;
+    }
+
+    header .em-breve {
+        grid-area: breve;
+        color: #35A8FB;
+    }
+
+    header .logo {
+        grid-area: logo;
+    }
+
+    header .procura {
+        grid-area: procura;
+    }
+
+    header .conta {
+        grid-area: conta;
+    }
+
+    
+    header img {
+        width: 100px;
+        height: 80px;
+    }
+    
+
+    header nav p {
+        font-size: 55px;
+        font-family: Righteous;}
+
+    .filme-area {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    
+    .filme {
+        width: 101px;
+        height: 159px;
     }
 
     .cartaz {
-        grid-area: cartaz;
-        background-color: slateblue;
-    }
-
-    .breve {
-        grid-area: breve;
-        background-color: teal;
+        width: 101px;
+        height: 159px;
     }
 }
+
