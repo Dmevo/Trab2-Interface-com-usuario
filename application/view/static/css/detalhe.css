@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@media screen and (max-width: 360px){
+    body {
+        background-color: rgb(77, 77, 77);
+        margin: 0px;
+    }
+
+    header .voltar {
+        width: 50px;
+        height: 40px;
+        margin-top: 5px;
+    }
+
+    .detalhe-area {
+        display: grid;
+        grid-template-areas: 
+        "cartaz informacao";
+    }
+
+    .cartaz-area {
+        grid-area: cartaz;
+        width: 135px;
+        height: 210px;
+        background-color: red;
+        margin: 10px;
+    }
+
+    .informacao-area {
+        grid-area: informacao;
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo" 
+        "faixa-etaria duracao";
+        margin: 10px;
+        grid-template-columns: auto 120px;
+    }
+
+    .titulo-area {
+        grid-area: titulo;
+        font-family: Righteous;
+        color: #FFFFFF;
+        font-size: 26px;
+    }
+
+    .faixa-etaria-area {
+        grid-area: faixa-etaria;
+    }
+
+    .duracao-area {
+        grid-area: duracao;
+        font-family: Righteous;
+        color: #FFFFFF;
+        font-size: 26px;
+    }
+
+    .cartaz {
+        width: 135px;
+        height: 210px;
+    }
+
+    .faixa-etaria {
+        width: 45px;
+        height: 45px;
+    }
+
+    .dias-area {
+        display: grid;
+        background-color: #363636;
+    }
+
+
+}

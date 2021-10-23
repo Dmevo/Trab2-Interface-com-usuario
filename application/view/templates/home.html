@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FastTickets</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}"/>
     </head>
     <body>
         <header>
@@ -20,9 +20,11 @@
             </nav>
         </header>
         <div class="filme-area">
+            {% for filme in filme_lista %}
             <div class="filme">
-                <img class="cartaz" src="{{ url_for('static', filename='img/pedro_coelho.jpg') }}">
+                <a href="{{ url_for('detalhe', id=filme.get_id()) }}"><img class="cartaz" src="{{ url_for('static', filename='img/'+filme.get_cartaz())}}"></a>
             </div>
+            {% endfor %}
         </div>
     </body>
 </html>

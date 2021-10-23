@@ -1,6 +1,18 @@
 from flask import render_template
 from application import app
+from application.model.dao.filmeDAO import FilmeDAO
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    filme_dao = FilmeDAO()
+    filme_lista = filme_dao.mostrar_filmes()
+
+    return render_template("home.html", filme_lista = filme_lista)
+
+@app.route('/detalhe/<id>')
+def detalhe(id):
+    filme_dao = FilmeDAO()
+    filme_lista = filme_dao.mostrar_filmes()
+    for filme in filme_lista:
+        if str(filme.get_id()) == id:
+            return render_template("detalhe.html", filme = filme)

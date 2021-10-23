@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastTickets</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detalhe.css') }}"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/"><img class="voltar" src="{{ url_for('static', filename='img/seta_voltar.svg') }}"></a>
+        </nav>
+    </header>
+    <div class="detalhe-area">
+        <div class="cartaz-area">
+            <img class="cartaz" src="{{ url_for('static', filename='img/'+filme.get_cartaz())}}">
+        </div>
+        <div class="informacao-area">
+            <div class="titulo-area">
+                {{ filme.get_titulo() }}
+            </div>
+            <div class="faixa-etaria-area">
+                <img class="faixa-etaria" src="{{ url_for('static', filename='img/'+filme.get_faixa_etaria())}}">
+            </div>
+            <div class="duracao-area">
+                {{ filme.get_duracao() }}
+            </div>
+        </div> 
+    </div>
+    <div class="dias-area">
+
+    </div>
+</body>
+</html>
