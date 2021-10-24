@@ -1,9 +1,9 @@
 class Cinema:
 
-    def __init__(self, nome=None, sala=None, tipo=None):
+    def __init__(self, nome=None, sala=None, filme=None):
         self.nome = nome
         self.sala = sala
-        self.tipo = tipo
+        self.filme = filme
 
     def get_nome(self):
         return self.nome
@@ -11,5 +11,5 @@ class Cinema:
     def get_sala(self):
         return self.sala
 
-    def get_tipo(self):
-        return self.tipo
+    def get_filme(self):
+        return self.filme

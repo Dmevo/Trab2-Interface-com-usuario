@@ -1,6 +1,6 @@
 class Filme:
     
-    def __init__(self, id=None, titulo=None, cartaz=None, duracao=None, faixa_etaria=None, horarios=None, lancamento=None):
+    def __init__(self, id=None, titulo=None, cartaz=None, duracao=None, faixa_etaria=None, horarios=None, lancamento=None, tipo=None):
         self.id = id
         self.titulo = titulo
         self.cartaz = cartaz
@@ -8,6 +8,7 @@ class Filme:
         self.faixa_etaria = faixa_etaria
         self.horarios = horarios
         self.lancamento = lancamento
+        self.tipo = tipo
 
     def get_id(self):
         return self.id
@@ -29,3 +30,6 @@ class Filme:
     
     def get_lancamento(self):
         return self.lancamento
+
+    def get_tipo(self):
+        return self.tipo
