@@ -47,5 +47,42 @@
             </div>
         </div>
     </div>
+    
+    <div class="cinema-area">
+        <div class="cinema">
+            {% for cinema in cinema_lista %}
+            <div class="nome-cinema">
+            {{ cinema.get_nome() }}
+            </div>
+            <div class="sessao-cinema">
+                <div class="sala-cinema">
+                    {% for sala in cinema.get_sala() %}
+
+                    {{ sala }}
+
+                    {% endfor %}
+                </div>
+            {% endfor %}
+                
+                <div class="tipo-filme">
+                    {% for tipo in filme.get_tipo() %}
+                        <div class="tipo">
+                            {{ tipo }}
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="horario-filme">
+                    {% for horario in filme.get_horarios() %}
+
+                        <div class="horario">
+                            {{ horario }}
+                        </div>
+                    
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -52,6 +52,7 @@
         font-family: Righteous;
         color: #FFFFFF;
         font-size: 26px;
+        margin-left: 10px;
     }
 
     .cartaz {
@@ -96,7 +97,71 @@
         color: #35A8FB;
     }
 
-    
+    .cinema-area {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        font-family: Righteous;
+    }
+
+    .cinema {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #363636;
+        padding: 10px;
+    }
+
+    .nome-cinema {
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .sessao-cinema {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .sala-cinema {
+        color: #FFFFFF;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .tipo-filme {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        color: #F3AF00;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .tipo {
+        margin-right: 15px;
+    }
+
+    .horario-filme {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .horario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #4D4D4D;
+        border: solid #F3AF00;
+        color: #35A8FB;
+        border-radius: 10px;
+        font-size: 19px;
+        width: 94px;
+        height: 31px;
+        margin-right: 10px;
+    }
 
 
 }
