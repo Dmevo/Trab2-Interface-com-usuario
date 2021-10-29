@@ -1,0 +1,14 @@
+@media screen and (max-width: 360px){
+
+    body {
+        background-color: #727272;
+    }
+
+    .voltar {
+        display: flex;
+        flex-direction: row;
+        width: 50px;
+        height: 40px;
+    }
+
+}
