@@ -1,14 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 @media screen and (max-width: 360px){
 
     body {
         background-color: #727272;
+        margin: 0px;
     }
 
     .voltar {
         display: flex;
         flex-direction: row;
-        width: 50px;
-        height: 40px;
+        justify-content: center;
+        width: 360px;
+        height: 60px;
+        margin-top: 200px;
+    }
+
+    .voltar-button {
+        width: 70px;
+        height: 60px;
+    }
+
+    .area-full {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 360px;
+        height: 300px;
+    }
+
+    .conta-area {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #4D4D4D;
+        width: 342px;
+        height: 105px;
+        margin-top: 20px;
+        border-radius: 9px;
+        font-family: Righteous;
+        font-size: 26px;
+    }
+
+    .conta-icon {
+        width: 58px;
+        height: 55px;
+    }
+
+    .nome-conta {
+        color: #35A8FB;
+        margin-left: 5px;
+        margin-right: 80px;
+    }
+
+    .entrar-button {
+        color: #F3AF00;
+    }
+
+    .local-area {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #4D4D4D;
+        width: 342px;
+        height: 68px;
+        margin-top: 20px;
+        border-radius: 8px;
+        font-family: Righteous;
+        font-size: 26px;
+    }
+    
+    .local-icon {
+        width: 58px;
+        height: 55px;
+    }
+
+    .nome-local {
+        color: #35A8FB;
+        margin-left: 5px;
+        margin-right: 60px;
+    }
+
+    .trocar-button {
+        color: #F3AF00;
     }
 
 }

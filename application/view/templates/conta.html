@@ -8,8 +8,22 @@
     <title>FastTickets</title>
 </head>
 <body>
+    <div class="area-full">
+        <div class="conta-area">
+            <img class="conta-icon" src="{{ url_for('static', filename='img/account-button.svg') }}">
+            <div class="nome-conta">Visitante</div>
+            <div class="entrar-button">Entrar</div>
+        </div>
+
+        <div class="local-area">
+            <img class="local-icon" src="{{ url_for('static', filename='img/local-icon.svg') }}">
+            <div class="nome-local">Vassouras</div>
+            <div class="trocar-button">Trocar</div>
+        </div>
+    </div>
+
     <div class="voltar">
-        <a href="/"><img class="voltar" src="{{ url_for('static', filename='img/seta_voltar.svg') }}"></a>
+        <a href="/"><img class="voltar-button" src="{{ url_for('static', filename='img/seta_voltar.svg') }}"></a>
     </div>
 </body>
 </html>
