@@ -70,7 +70,7 @@
         flex-wrap: wrap;
         flex-direction: row;
         margin: 10px;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
     
     .filme {

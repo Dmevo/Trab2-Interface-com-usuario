@@ -15,16 +15,38 @@
                 <a href="/conta"><img class="conta" src="{{ url_for('static', filename='img/account-button.svg') }}"></a>
             </nav>
             <nav class="nav-filmes">
-                <p class="em-cartaz">Em Cartaz</p>
-                <p class="em-breve">Em Breve</p>
+                <a onclick="get_cartaz()"><p class="em-cartaz">Em Cartaz</p></a>
+                <a onclick="get_breve()"><p class="em-breve">Em Breve</p></a>
             </nav>
         </header>
-        <div class="filme-area">
-            {% for filme in filme_lista %}
-            <div class="filme">
-                <a href="{{ url_for('detalhe', id=filme.get_id()) }}"><img class="cartaz" src="{{ url_for('static', filename='img/'+filme.get_cartaz())}}"></a>
-            </div>
-            {% endfor %}
+        <div id="filme" class="filme-area">
+            
         </div>
     </body>
+    <script>
+        function get_breve() {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "/em-breve");
+            xhr.send(null)
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("filme").innerHTML = xhr.response;
+                }
+            }
+            return false;
+        }
+
+        function get_cartaz() {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "/em-cartaz");
+            xhr.send(null)
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("filme").innerHTML = xhr.response;
+                }
+            }
+            return false;
+        }
+
+    </script>
 </html>

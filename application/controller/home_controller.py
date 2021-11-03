@@ -23,3 +23,17 @@ def detalhe(id):
 @app.route('/conta')
 def conta():
     return render_template("conta.html")
+
+@app.route('/em-breve')
+def breve():
+    filme_dao = FilmeDAO()
+    breve_lista = filme_dao.mostrar_breve()
+
+    return render_template("em-breve.html", breve_lista = breve_lista)
+
+@app.route('/em-cartaz')
+def cartaz():
+    filme_dao = FilmeDAO()
+    filme_lista = filme_dao.mostrar_filmes()
+
+    return render_template("em-cartaz.html", filme_lista = filme_lista)
