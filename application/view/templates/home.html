@@ -7,7 +7,7 @@
         <title>FastTickets</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}"/>
     </head>
-    <body>
+    <body onload="get_cartaz()">
         <header>
             <nav class="nav-buttons">
                 <img class="logo" src="{{ url_for('static', filename='img/logo.svg') }}">
@@ -15,8 +15,8 @@
                 <a href="/conta"><img class="conta" src="{{ url_for('static', filename='img/account-button.svg') }}"></a>
             </nav>
             <nav class="nav-filmes">
-                <a onclick="get_cartaz()"><p class="em-cartaz">Em Cartaz</p></a>
-                <a onclick="get_breve()"><p class="em-breve">Em Breve</p></a>
+                <a onclick="get_cartaz()"><p class="em-cartaz" id="cartaz">Em Cartaz</p></a>
+                <a onclick="get_breve()"><p class="em-breve" id="breve">Em Breve</p></a>
             </nav>
         </header>
         <div id="filme" class="filme-area">
@@ -27,25 +27,32 @@
         function get_breve() {
             let xhr = new XMLHttpRequest();
             xhr.open("GET", "/em-breve");
-            xhr.send(null)
+            xhr.send(null);
             xhr.onreadystatechange = function() {
                 if(xhr.readyState == 4 && xhr.status == 200) {
                     document.getElementById("filme").innerHTML = xhr.response;
+                    document.getElementById("cartaz").style.color = "#35A8FB"
+                    document.getElementById("breve").style.color = "#F3AF00"
                 }
             }
             return false;
+        
         }
+
 
         function get_cartaz() {
             let xhr = new XMLHttpRequest();
             xhr.open("GET", "/em-cartaz");
-            xhr.send(null)
+            xhr.send(null);
             xhr.onreadystatechange = function() {
                 if(xhr.readyState == 4 && xhr.status == 200) {
                     document.getElementById("filme").innerHTML = xhr.response;
+                    document.getElementById("cartaz").style.color = "#F3AF00"
+                    document.getElementById("breve").style.color = "#35A8FB"
                 }
             }
             return false;
+
         }
 
     </script>

@@ -1,5 +1,5 @@
 {% for filme in breve_lista %}
     <div class="filme">
-        <a href="{{ url_for('detalhe', id=filme.get_id()) }}"><img class="cartaz" src="{{ url_for('static', filename='img/'+filme.get_cartaz())}}"></a>
+        <img class="cartaz" src="{{ url_for('static', filename='img/'+filme.get_cartaz())}}">
     </div>
 {% endfor %}

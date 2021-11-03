@@ -18,7 +18,7 @@ def detalhe(id):
     cinema_lista = cinema_dao.mostrar_cinemas()
     for filme in filme_lista:
         if str(filme.get_id()) == id:
-            return render_template("detalhe.html", filme = filme, cinema_lista = cinema_lista)
+            return render_template("detalhe.html", filme = filme, cinema_lista = cinema_lista, )
 
 @app.route('/conta')
 def conta():
